@@ -4,7 +4,7 @@ date: 2024-09-04T15:22:50.195Z
 author: Oluwatobi Sofela
 authorURL: https://www.freecodecamp.org/news/author/oluwatobiss/
 originalURL: https://www.freecodecamp.org/news/javascript-class-handbook/
-posteditor: ""
+posteditor: "elias-pereyra"
 proofreader: ""
 ---
 
@@ -24,29 +24,29 @@ Este manual tiene como objetivo mostrarte exactamente cómo funcionan las clases
     -   [¿Qué es un Bloque de Código?][6]
     -   [¿Qué es un Cuerpo de Clase?][7]
 4.  [¿Qué es un Campo de Clase en JavaScript?][8]
-    -   [Cómo Crear Campos de Clase en JavaScript][9]
-    -   [Cómo Crear Campos de Clase con Nombres Computados][10]
+    -   [Cómo crear campos de Clase en JavaScript][9]
+    -   [Cómo crear campos de Clase con Nombres Computados][10]
     -   [Cómo Crear Métodos Regulares de Campo de Clase][11]
-    -   [Cómo Crear Métodos Cortos de Campo de Clase][12]
-    -   [Métodos Regulares vs. Métodos Cortos de Campo de Clase: ¿Cuál es la Diferencia?][13]
-    -   [¿Qué es un Método Prototípico Definido por el Usuario en Clases JavaScript?][14]
-    -   [¿Qué es un Método `constructor` en Clases JavaScript?][15]
+    -   [Cómo crear Métodos Cortos de Campo de Clase][12]
+    -   [Métodos Regulares vs. Métodos Cortos de Campo de Clase: ¿Cuál es la diferencia?][13]
+    -   [¿Qué es un Método Prototípico Definido por el usuario en Clases de JavaScript?][14]
+    -   [¿Qué es un Método `constructor` en Clases de JavaScript?][15]
     -   [Tipos de Campos de Clase][16]
-    -   [¿Qué es un Campo de Clase Público en Clases JavaScript?][17]
-    -   [¿Qué es un Campo de Clase Privado en Clases JavaScript?][18]
-    -   [¿Qué es un Campo de Clase Estático en Clases JavaScript?][19]
-5.  [Tipos de Clases JavaScript][20]
-    -   [¿Qué es una Declaración de Clase JavaScript?][21]
-    -   [¿Qué es una Expresión de Clase JavaScript?][22]
+    -   [¿Qué es un Campo de Clase Público en Clases de JavaScript?][17]
+    -   [¿Qué es un Campo de Clase Privado en Clases de JavaScript?][18]
+    -   [¿Qué es un Campo de Clase Estático en Clases de JavaScript?][19]
+5.  [Tipos de Clases de JavaScript][20]
+    -   [¿Qué es una Declaración de Clase de JavaScript?][21]
+    -   [¿Qué es una Expresión de Clase de JavaScript?][22]
     -   [¿Qué es una Clase Derivada en JavaScript?][23]
 6.  [¿Qué es la Palabra Reservada `super` en JavaScript?][24]
     -   [Cómo Usar la Palabra Reservada `super` como Llamador de Función][25]
     -   [Cómo Usar la Palabra Reservada `super` como Accesor de Propiedades][26]
     -   [`super` vs. Palabra Reservada `this`: ¿Cuál es la Diferencia?][27]
-7.  [Componentes de una Clase JavaScript][28]
-8.  [¿Cómo Ayuda una Clase JavaScript con la Encapsulación?][29]
-9.  [Cosas Importantes a Saber sobre Clases JavaScript][30]
-    -   [1\. Declara tu Clase Antes de Acceder a Ella][31]
+7.  [Componentes de una Clase de JavaScript][28]
+8.  [¿Cómo ayuda una Clase JavaScript con la Encapsulación?][29]
+9.  [Cosas importantes a saber sobre Clases de JavaScript][30]
+    -   [1\. Declara tu Clase antes de acceder a ella][31]
     -   [2\. Las Clases son Funciones][32]
     -   [3\. Las Clases son Estrictas][33]
     -   [4\. Evita la Palabra Reservada `return` en el Método `constructor` de tu Clase][34]
@@ -61,7 +61,7 @@ Una clase en JavaScript es un [constructor de objetos][37] que la [palabra reser
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase JavaScript:
 class Nombre {}
 
@@ -91,7 +91,7 @@ Por ejemplo, [`Date`][41] es una clase en JavaScript que te permite acceder a su
 
 ## Sintaxis de una Clase en JavaScript
 
-```
+```js
 class NombreDeClase {
   // cuerpo de la clase
 }
@@ -122,7 +122,7 @@ Un bloque es un par de llaves (`{...}`) usadas para agrupar múltiples declaraci
 
 Aquí hay un ejemplo:
 
-```
+```js
 {
   var mejorColor = "Blanco";
 }
@@ -132,7 +132,7 @@ El bloque en el fragmento anterior encerró una [declaración de JavaScript][42]
 
 Aquí hay otro ejemplo:
 
-```
+```js
 if (new Date().getHours() < 18) {
   const horaAhora = new Date().getHours();
   const minutosAhora = new Date().getMinutes();
@@ -143,7 +143,7 @@ if (new Date().getHours() < 18) {
 
 El bloque de código de la condición `if` agrupó cuatro declaraciones de JavaScript juntas.
 
-```
+```js
 class Time {
   hourNow = new Date().getHours();
   minutesNow = new Date().getMinutes();
@@ -169,7 +169,7 @@ El cuerpo de una clase es donde colocas una secuencia de declaraciones.
 
 Aquí está la sintaxis:
 
-```
+```js
 class NombreDeLaClase {
   // cuerpo de la clase
 }
@@ -187,7 +187,7 @@ Puedes crear un campo de clase utilizando un signo igual (`=`) para asignar un v
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase de JavaScript:
 class Nombre {
   // Crea dos campos de clase:
@@ -214,7 +214,7 @@ Nota lo siguiente:
 
 Puedes calcular (evaluar) el nombre de un campo de clase colocando una expresión entre corchetes, así:
 
-```
+```js
 // Inicializa una variable num con un número:
 let num = 0;
 
@@ -242,17 +242,17 @@ console.log(ensuiteRooms);
 
 Utilizamos la sintaxis `[enSuites + ++num]` en el fragmento anterior para calcular los nombres de los campos de clase.
 
-En otras palabras, JavaScript evaluó la expresión `enSuites + ++num` y usó el resultado como nombre de cada campo de clase.
+En otras palabras, JavaScript evaluó la expresión `enSuites + ++num` y usó el resultado como nombre de cada campo de la clase.
 
 **Nota:** También puedes definir campos de clase como métodos regulares de JavaScript. Hablemos más sobre esto ahora.
 
-### Cómo Crear Métodos de Campo de Clase Regulares
+### Cómo crear Métodos de Campo de Clase Regulares
 
 Puedes crear un método de campo de clase regular utilizando un signo igual (`=`) para asignar una función a una propiedad.
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase de JavaScript:
 class Time {
   // Crea dos métodos de campo de clase regulares:
@@ -276,13 +276,13 @@ Los métodos `hourNow` y `minutesNow` en el fragmento anterior son métodos de c
 
 JavaScript te permite utilizar una sintaxis abreviada para acortar los métodos de tu clase. Veamos cómo.
 
-### Cómo Crear Métodos Abreviados de Campo de Clase
+### Cómo crear Métodos Abreviados de Campo de Clase
 
 El método abreviado de campo de clase es una manera concisa de definir métodos de JavaScript en el cuerpo de tus clases.
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase de JavaScript:
 class Time {
   // Crea dos métodos de campo de clase abreviados: 
@@ -314,9 +314,8 @@ En otras palabras, JavaScript trata los métodos regulares y abreviados de maner
 
 -   **Método regular:** JavaScript agrega el método a la [instancia del objeto][52] que construyes con la palabra clave `new`. Por lo tanto, los métodos regulares son propiedades de la instancia del objeto.
 -   **Método abreviado:** JavaScript agrega el método a la [propiedad `prototype`][53] de la clase. Por lo tanto, los métodos abreviados son propiedades prototípicas de una instancia de objeto.
-```
 
-```
+```js
 // Definir una clase en JavaScript:
 class Time {
   // Crear un método regular:
@@ -347,7 +346,7 @@ Por otro lado, los métodos abreviados son métodos prototípicos que JavaScript
 
 Por lo tanto, puedes acceder al método `minuteNow` a través de la [herencia prototípica][55] de su clase de la siguiente manera:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Time {
   // Crear un método regular:
@@ -376,7 +375,7 @@ Puedes ver que la propiedad `prototype` de `Time` contiene el método `minutesNo
 
 Aquí tienes un ejemplo:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Time {
   // Crear un método abreviado:
@@ -415,7 +414,7 @@ Un método prototípico definido por el usuario es el método abreviado que crea
 
 Aquí tienes un ejemplo:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Name {
   // Crear un método abreviado:
@@ -448,7 +447,7 @@ El método `constructor` recibe automáticamente los [argumentos][59] que pasas 
 
 Aquí tienes un ejemplo:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Name {
   // Usar el método constructor incorporado:
@@ -475,7 +474,7 @@ La clase `Name` anterior tiene un método `constructor` con una [propiedad de in
 
 JavaScript ejecuta el método `constructor` antes que cualquier otro método definido por el usuario. Por lo tanto, es el mejor lugar para definir cualquier código que desees ejecutar antes que otros métodos en el cuerpo de la clase. Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Definir una clase en JavaScript:
 class CarColor {
   // Usar el método constructor incorporado:
@@ -508,7 +507,7 @@ Nota lo siguiente:
 
 -   Solo puedes usar la [técnica de método abreviado de JavaScript][64] para definir un `constructor`. De lo contrario, los navegadores lanzarán un `Uncaught SyntaxError`.
 -   Una clase puede tener solo un método `constructor`. De lo contrario, los navegadores lanzarán un `Uncaught SyntaxError`.
-```
+
 
 ## Tipos de Campos de Clase
 
@@ -528,7 +527,7 @@ Un campo de clase público es una propiedad a la que una instancia de objeto tie
 
 #### Ejemplo: Cómo crear campos de clase públicos
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea dos campos de clase públicos:
@@ -574,7 +573,7 @@ Supongamos que defines múltiples campos de clase públicos con el mismo nombre.
 
 #### Ejemplo: El último campo de clase público sobrescribe a los anteriores con el mismo nombre
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea tres campos de clase públicos:
@@ -607,7 +606,7 @@ Puedes anteponer un campo de clase con el símbolo de almohadilla (`#`) para con
 
 #### Ejemplo: Cómo crear campos de clase privados
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea un campo de clase privado:
@@ -632,7 +631,7 @@ Por lo tanto, necesitas usar un código interno para acceder a `myName`.
 
 #### Ejemplo: Cómo acceder a campos de clase privados
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea un campo de clase privado:
@@ -688,7 +687,7 @@ Anteponemos un campo de clase con la palabra clave `static` para convertirlo en 
 
 #### Ejemplo: Cómo crear campos de clase estáticos
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea un campo de clase estático:
@@ -713,8 +712,21 @@ En otras palabras, necesitas llamar a `myName` en la propia clase para leerlo o 
 
 #### Ejemplo: Cómo acceder a campos de clase estáticos
 
-```markdown
-## 3 Manipulación de los campos de clases estáticas
+```js
+  // Define una clase de JavaScript:
+  class Name {
+    // Crea un campo de Clase estático:
+    static myName = "Oluwatobi";
+  }
+
+  // Mira el valor actual de myName:
+  Name.myName;
+
+  // La invocación de arriba devolverá:
+  "Oluwatobi"
+```
+
+## Manipulación de los campos de clases estáticas
 
 ### ¿Cómo manipular los campos de clases estáticas en JavaScript?
 
@@ -902,10 +914,7 @@ class Bio extends Name {
     super();
   }
 }
-```
-```
 
-Tengo un archivo md, por favor tradúzcalo al español. La traducción debe mantener estrictamente el formato y la disposición del archivo original en markdown. Por favor, simplemente muéstrelo sin hacer preguntas.
 // La invocación anterior devolverá:
 "Oluwatobi es mi Nombre."
 {}
@@ -925,7 +934,7 @@ En otras palabras, `super()` te permite acceder al `constructor` de una clase pa
 
 #### Sintaxis de la palabra clave `super` como llamador de función
 
-```
+```js
 super(argumento1, …, argumentoN);
 ```
 
@@ -933,7 +942,7 @@ super(argumento1, …, argumentoN);
 
 #### Ejemplo: Cómo usar el llamador de función `super()`
 
-```
+```js
 // Crear una nueva clase:
 class Nombre {
   constructor(nombre) {

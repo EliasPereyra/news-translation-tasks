@@ -4,7 +4,7 @@ date: 2024-09-04T15:22:50.195Z
 author: Oluwatobi Sofela
 authorURL: https://www.freecodecamp.org/news/author/oluwatobiss/
 originalURL: https://www.freecodecamp.org/news/javascript-class-handbook/
-posteditor: ""
+posteditor: "elias-pereyra"
 proofreader: ""
 ---
 
@@ -61,7 +61,7 @@ Una clase en JavaScript es un [constructor de objetos][37] que la [palabra reser
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase JavaScript:
 class Nombre {}
 
@@ -91,7 +91,7 @@ Por ejemplo, [`Date`][41] es una clase en JavaScript que te permite acceder a su
 
 ## Sintaxis de una Clase en JavaScript
 
-```
+```js
 class NombreDeClase {
   // cuerpo de la clase
 }
@@ -122,7 +122,7 @@ Un bloque es un par de llaves (`{...}`) usadas para agrupar múltiples declaraci
 
 Aquí hay un ejemplo:
 
-```
+```js
 {
   var mejorColor = "Blanco";
 }
@@ -132,7 +132,7 @@ El bloque en el fragmento anterior encerró una [declaración de JavaScript][42]
 
 Aquí hay otro ejemplo:
 
-```
+```js
 if (new Date().getHours() < 18) {
   const horaAhora = new Date().getHours();
   const minutosAhora = new Date().getMinutes();
@@ -143,7 +143,7 @@ if (new Date().getHours() < 18) {
 
 El bloque de código de la condición `if` agrupó cuatro declaraciones de JavaScript juntas.
 
-```
+```js
 class Time {
   hourNow = new Date().getHours();
   minutesNow = new Date().getMinutes();
@@ -169,7 +169,7 @@ El cuerpo de una clase es donde colocas una secuencia de declaraciones.
 
 Aquí está la sintaxis:
 
-```
+```js
 class NombreDeLaClase {
   // cuerpo de la clase
 }
@@ -187,7 +187,7 @@ Puedes crear un campo de clase utilizando un signo igual (`=`) para asignar un v
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase de JavaScript:
 class Nombre {
   // Crea dos campos de clase:
@@ -214,7 +214,7 @@ Nota lo siguiente:
 
 Puedes calcular (evaluar) el nombre de un campo de clase colocando una expresión entre corchetes, así:
 
-```
+```js
 // Inicializa una variable num con un número:
 let num = 0;
 
@@ -252,7 +252,7 @@ Puedes crear un método de campo de clase regular utilizando un signo igual (`=`
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase de JavaScript:
 class Time {
   // Crea dos métodos de campo de clase regulares:
@@ -282,7 +282,7 @@ El método abreviado de campo de clase es una manera concisa de definir métodos
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Define una clase de JavaScript:
 class Time {
   // Crea dos métodos de campo de clase abreviados: 
@@ -314,9 +314,8 @@ En otras palabras, JavaScript trata los métodos regulares y abreviados de maner
 
 -   **Método regular:** JavaScript agrega el método a la [instancia del objeto][52] que construyes con la palabra clave `new`. Por lo tanto, los métodos regulares son propiedades de la instancia del objeto.
 -   **Método abreviado:** JavaScript agrega el método a la [propiedad `prototype`][53] de la clase. Por lo tanto, los métodos abreviados son propiedades prototípicas de una instancia de objeto.
-```
 
-```
+```js
 // Definir una clase en JavaScript:
 class Time {
   // Crear un método regular:
@@ -347,7 +346,7 @@ Por otro lado, los métodos abreviados son métodos prototípicos que JavaScript
 
 Por lo tanto, puedes acceder al método `minuteNow` a través de la [herencia prototípica][55] de su clase de la siguiente manera:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Time {
   // Crear un método regular:
@@ -376,7 +375,7 @@ Puedes ver que la propiedad `prototype` de `Time` contiene el método `minutesNo
 
 Aquí tienes un ejemplo:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Time {
   // Crear un método abreviado:
@@ -415,7 +414,7 @@ Un método prototípico definido por el usuario es el método abreviado que crea
 
 Aquí tienes un ejemplo:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Name {
   // Crear un método abreviado:
@@ -448,7 +447,7 @@ El método `constructor` recibe automáticamente los [argumentos][59] que pasas 
 
 Aquí tienes un ejemplo:
 
-```
+```js
 // Definir una clase en JavaScript:
 class Name {
   // Usar el método constructor incorporado:
@@ -475,7 +474,7 @@ La clase `Name` anterior tiene un método `constructor` con una [propiedad de in
 
 JavaScript ejecuta el método `constructor` antes que cualquier otro método definido por el usuario. Por lo tanto, es el mejor lugar para definir cualquier código que desees ejecutar antes que otros métodos en el cuerpo de la clase. Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Definir una clase en JavaScript:
 class CarColor {
   // Usar el método constructor incorporado:
@@ -508,7 +507,6 @@ Nota lo siguiente:
 
 -   Solo puedes usar la [técnica de método abreviado de JavaScript][64] para definir un `constructor`. De lo contrario, los navegadores lanzarán un `Uncaught SyntaxError`.
 -   Una clase puede tener solo un método `constructor`. De lo contrario, los navegadores lanzarán un `Uncaught SyntaxError`.
-```
 
 ## Tipos de Campos de Clase
 
@@ -528,7 +526,7 @@ Un campo de clase público es una propiedad a la que una instancia de objeto tie
 
 #### Ejemplo: Cómo crear campos de clase públicos
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea dos campos de clase públicos:
@@ -574,7 +572,7 @@ Supongamos que defines múltiples campos de clase públicos con el mismo nombre.
 
 #### Ejemplo: El último campo de clase público sobrescribe a los anteriores con el mismo nombre
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea tres campos de clase públicos:
@@ -607,7 +605,7 @@ Puedes anteponer un campo de clase con el símbolo de almohadilla (`#`) para con
 
 #### Ejemplo: Cómo crear campos de clase privados
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea un campo de clase privado:
@@ -632,7 +630,7 @@ Por lo tanto, necesitas usar un código interno para acceder a `myName`.
 
 #### Ejemplo: Cómo acceder a campos de clase privados
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea un campo de clase privado:
@@ -688,7 +686,7 @@ Anteponemos un campo de clase con la palabra clave `static` para convertirlo en 
 
 #### Ejemplo: Cómo crear campos de clase estáticos
 
-```
+```js
 // Define una clase de JavaScript:
 class Name {
   // Crea un campo de clase estático:
@@ -713,12 +711,23 @@ En otras palabras, necesitas llamar a `myName` en la propia clase para leerlo o 
 
 #### Ejemplo: Cómo acceder a campos de clase estáticos
 
-```markdown
-## 3 Manipulación de los campos de clases estáticas
+```js
+// Define a JavaScript class:
+class Name {
+  // Create a static class field:
+  static myName = "Oluwatobi";
+}
 
-### ¿Cómo manipular los campos de clases estáticas en JavaScript?
+// Check myName's current value:
+Name.myName;
 
-JavaScript te permite manipular los campos estáticos de las clases de las mismas maneras que los del objeto literal.
+// The invocation above will return:
+"Oluwatobi"
+```
+
+[**Try Editing It**][72]
+
+Supongamos que defines múltiples campos estáticos de clase con el mismo nombre. En ese caso, la última propiedad sobrescribirá a las anteriores.
 
 #### Ejemplo: El último campo de clase estática sobrescribe los anteriores con el mismo nombre
 
@@ -925,7 +934,7 @@ En otras palabras, `super()` te permite acceder al `constructor` de una clase pa
 
 #### Sintaxis de la palabra clave `super` como llamador de función
 
-```
+```js
 super(argumento1, …, argumentoN);
 ```
 
@@ -933,7 +942,7 @@ super(argumento1, …, argumentoN);
 
 #### Ejemplo: Cómo usar el llamador de función `super()`
 
-```
+```js
 // Crear una nueva clase:
 class Nombre {
   constructor(nombre) {
@@ -972,7 +981,7 @@ En otras palabras, la llamada a la función `super()` busca un `constructor` en 
 
 #### Ejemplo: ¿Qué pasa si accedes a `this` antes de `super` en el `constructor` de una clase derivada?
 
-```
+```js
 // Crear una nueva clase:
 class Nombre {
   constructor(nombre) {
@@ -998,7 +1007,7 @@ El fragmento anterior lanza un `Uncaught ReferenceError` porque el `constructor`
 
 #### Ejemplo: ¿Qué pasa si solo usas la palabra clave `this` en el `constructor` de una clase derivada?
 
-```
+```js
 // Crear una nueva clase:
 class Nombre {
   createNombre() {
@@ -1032,13 +1041,13 @@ Puedes usar la palabra clave `super` como un accesor de propiedad en tus clases 
 
 #### Sintaxis de la palabra clave `super` como accesor de propiedad en notación de punto
 
-```
+```js
 super.propiedadDeLaClaseOPadreDelObjeto;
 ```
 
 #### Ejemplo: Usar la notación de punto de la palabra clave `super` para acceder al campo estático de la clase padre
 
-```
+```js
 // Crear una nueva clase:
 class Nombre {
   // Crear un campo estático de clase:
@@ -1068,7 +1077,7 @@ Supongamos que omites la palabra clave `static`. En ese caso, `super` buscará u
 
 #### Ejemplo: Usar la notación de punto de la palabra clave `super` para acceder al campo prototípico de la clase padre
 
-```
+```js
 // Crear una nueva clase:
 class Tiempo {
   // Crear un método prototípico:
@@ -1090,6 +1099,7 @@ class Momento extends Tiempo {
 
 // Crear una nueva instancia de objeto:
 const momentoAhora = new Momento();
+```
 
 [**Inténtalo Editando**][91]
 
@@ -1097,7 +1107,7 @@ Usamos la palabra clave `super` en el fragmento anterior para acceder a los camp
 
 #### Ejemplo: Usa la notación de punto de la palabra clave `super` para acceder a una propiedad prototipal de un objeto padre
 
-```
+```js
 // Crear un nuevo objeto:
 const website = {
   // Crear un método:
@@ -1130,7 +1140,7 @@ Usamos la palabra clave `super` en el fragmento anterior para acceder al método
 
 **Nota:** El código `Object.setPrototypeOf()` cambia la [propiedad `[[Prototype]]` del company][93] al objeto website. Por lo tanto, la [cadena de prototipos][94] del objeto `company` se verá así:
 
-```
+```js
 { showCompany: showCompany() } ---> { showName: showName() } ---> Object.prototype ---> null
 ```
 
@@ -1138,13 +1148,13 @@ También puedes usar la palabra clave `super` como un accesor de propiedad con n
 
 #### Sintaxis de la palabra clave `super` como un accesor de propiedad con notación de corchete
 
-```
+```js
 super[expresión];
 ```
 
 #### Ejemplo: Usa la notación de corchete de la palabra clave `super` para acceder a un campo estático de la clase padre
 
-```
+```js
 // Crear una nueva clase:
 class Name {
   // Crear un campo de clase estática:
@@ -1172,7 +1182,7 @@ Usamos la palabra clave `super` en el fragmento anterior para acceder al campo d
 
 #### Ejemplo: Usa la palabra clave `super` para acceder al campo de instancia de la clase padre
 
-```
+```js
 // Crear una nueva clase:
 class Name {
   // Crear un campo de clase de instancia:
@@ -1212,7 +1222,7 @@ En otras palabras, `super` comienza su búsqueda desde la propiedad `prototype` 
 
 Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Crear una nueva clase:
 class ParentClass {
   // Crear un método prototipal:
@@ -1280,7 +1290,7 @@ Las características principales de una clase de JavaScript son las siguientes:
 
 Veamos estas características en una declaración de clase.
 
-```
+```js
 class ChildClass extends ParentClass {
   constructor(parameter) {
     super(parameter);
@@ -1301,7 +1311,7 @@ class ChildClass extends ParentClass {
 
 La equivalencia con función constructora del fragmento anterior se ve así:
 
-```
+```js
 function ChildClass() {
   this.instanceClassField = "El valor puede ser cualquier tipo de dato válido en JavaScript";
 }
@@ -1329,7 +1339,7 @@ Las clases te permiten prevenir que el código externo interactúe con los campo
 
 Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Crear una nueva clase:
 class Name {
   // Crear un campo de clase privada:
@@ -1364,7 +1374,7 @@ En consecuencia, el objeto de instancia `bio` no sabe nada sobre los datos inter
 
 Siempre que los usuarios necesiten acceder a los datos encapsulados, usarían los métodos disponibles públicamente de la siguiente manera:
 
-```
+```js
 // Verificar el valor de los datos de la instancia:
 bio.showMyName();
 
@@ -1387,7 +1397,7 @@ Encapsular tus datos es una excelente manera de mantener tu clase limpia. Previe
 
 Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Crear una nueva clase:
 class Name {
   // Crear un campo de clase pública:
@@ -1417,7 +1427,7 @@ Dado que el fragmento anterior no encapsuló los datos de la clase, refactorizar
 
 Aquí hay un ejemplo:
 
-```
+```js
 class Name {
   // Actualizar el nombre de los datos de myName a myFirstName:
   myFirstName = "Oluwatobi";
@@ -1439,7 +1449,7 @@ Sin embargo, la encapsulación previene que tal refactorización rompa el códig
 
 Aquí hay un ejemplo:
 
-```
+```js
 class Name {
   // Actualizar el nombre de los datos de myName a myFirstName:
   #myFirstName = "Oluwatobi";
@@ -1457,17 +1467,15 @@ class Name {
 
 // Crear una nueva instancia de objeto:
 const bio = new Name();
+```
 
-
-
-```markdown
 ## Clases en JavaScript
 
 ### La definición de clase en ES6
 
 En ES6, puedes definir clases en JavaScript usando el `class` palabra clave. Aquí hay un ejemplo de cómo definir una clase:
 
-```
+```js
 // Define una clase de JavaScript:
 class Bio {
   constructor() {
@@ -1490,7 +1498,7 @@ aboutMe.showFullName();
 "Oluwatobi Sofela"
 ```
 
-**Prueba a editarlo**
+[**Prueba a editarlo**][103]
 
 En este ejemplo, `Bio` es una clase que tiene un constructor para inicializar las propiedades de la instancia (`firstName` y `lastName`) y un método `showFullName` para mostrar el nombre completo.
 
@@ -1500,7 +1508,7 @@ La encapsulación es uno de los principios básicos de la orientación a objetos
 
 Aquí hay un ejemplo simple de encapsulación en JavaScript:
 
-```
+```js
 // Define una clase de JavaScript:
 class Bio {
   constructor() {
@@ -1552,7 +1560,7 @@ En otras palabras, JavaScript no [eleva][102] las declaraciones de clases. Por l
 
 Aquí hay un ejemplo:
 
-```
+```js
 // Crea una instancia de objeto desde la clase Name:
 const name = new Name();
 
@@ -1570,7 +1578,7 @@ El `typeof` de una clase es una función porque, internamente, la palabra clave 
 
 Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Define una clase de JavaScript:
 class Bio {
   // Define dos campos de instancia de clase:
@@ -1612,7 +1620,7 @@ En otras palabras, un [`return` del objeto][107] de un `constructor` anula su pa
 
 Por ejemplo, considera el siguiente código:
 
-```
+```js
 // Crea una nueva clase:
 class Name {
   constructor() {
@@ -1679,23 +1687,18 @@ JavaScript analiza los métodos de la clase y los accesores de propiedades segú
 #### 5\. Parsear los valores de las propiedades de la clase
 
 La computadora analiza los valores de campos de la clase según el orden de declaración haciendo lo siguiente:
-```
 
-
-[101]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz
-[102]: https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
-[103]: https://codepen.io/
-[104]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
-[105]: https://codepen.io/
-[106]: https://developer.mozilla.org/en-US/docs/Glossary/Primitive
-[107]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#subclassing_with_anonymous_classes
-[108]: https://codepen.io/
-```
+- Guarda la expresión inicializadora de cada campo de instancia para evaluaciones posteriores. JavaScript evaluará la expresión inicializadora durante los siguientes momentos:
+  - Cuando la palabra clave new está creando un objeto de instancia.
+  - Mientras se procesa el constructor de la clase padre.
+  - Antes de que la llamada a la función super() devuelva el control.
+- Asigna la palabra clave this de cada campo estático a la clase en sí y crea la propiedad estática en la clase.
+- Evalúa los bloques de inicialización estáticos de la clase y asigna su palabra clave this a la clase misma.
 
 **Nota:**
 
--   Solo después de que JavaScript analiza los valores de las propiedades de una clase, la clase está completamente inicializada y disponible como una función constructora.
--   Cualquier intento de acceder a la clase hija antes de su completa inicialización devolverá un `ReferenceError`.
+- Solo después de que JavaScript analiza los valores de las propiedades de una clase, la clase está completamente inicializada y disponible como una función constructora.
+- Cualquier intento de acceder a la clase hija antes de su completa inicialización devolverá un `ReferenceError`.
 
 ## Resumen
 
@@ -1824,4 +1827,3 @@ Utiliza un proyecto escalable para explicar los fundamentos de construir y gesti
 [109]: https://codesweetly.com/web-tech-terms-s#static-initialization-blocks
 [110]: https://amzn.to/48NjBdY
 [111]: https://amzn.to/48NjBdY
-
